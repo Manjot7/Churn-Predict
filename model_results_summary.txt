@@ -1,0 +1,46 @@
+CUSTOMER CHURN PREDICTION - MODEL RESULTS SUMMARY
+DATASET INFORMATION
+Total Samples: 10000
+Training Samples: 7000
+Test Samples: 3000
+Number of Features: 25
+Churn Rate: 20.37%
+
+MODEL PERFORMANCE SUMMARY
+                     accuracy precision    recall  f1_score   roc_auc                                                                                    best_params
+Voting Ensemble      0.859333  0.707692  0.527005  0.604128  0.873419  {'top_5_models': ['AdaBoost', 'Random Forest', 'CatBoost', 'Logistic Regression', 'XGBoost']}
+AdaBoost             0.846667  0.628183  0.605565  0.616667   0.86389                                                    {'learning_rate': 1.0, 'n_estimators': 200}
+Random Forest        0.838667  0.609294  0.579378   0.59396   0.86081              {'criterion': 'gini', 'max_depth': 9, 'min_samples_leaf': 1, 'n_estimators': 200}
+CatBoost             0.861333  0.715232  0.530278  0.609023  0.860462                                          {'depth': 8, 'iterations': 200, 'learning_rate': 0.1}
+Logistic Regression  0.852333   0.71875  0.451718  0.554774  0.853357                               {'C': 100, 'max_iter': 1000, 'penalty': 'l2', 'solver': 'lbfgs'}
+XGBoost              0.855333  0.697105  0.512275  0.590566  0.852958                  {'learning_rate': 0.1, 'max_depth': 7, 'n_estimators': 200, 'subsample': 0.8}
+Extra Trees          0.843333  0.637427  0.535188  0.581851  0.850514          {'max_depth': 20, 'min_samples_leaf': 1, 'min_samples_split': 2, 'n_estimators': 200}
+Gradient Boosting       0.847  0.661017  0.510638  0.576177  0.845839                  {'learning_rate': 0.2, 'max_depth': 7, 'n_estimators': 200, 'subsample': 0.8}
+LightGBM             0.852667  0.683297  0.515548  0.587687  0.838513                  {'learning_rate': 0.2, 'max_depth': 7, 'n_estimators': 200, 'num_leaves': 50}
+Decision Tree        0.831667  0.582555  0.612111  0.596967  0.828273                {'criterion': 'gini', 'max_depth': 8, 'min_samples_leaf': 9, 'random_state': 0}
+LDA                     0.824  0.577861  0.504092  0.538462  0.820096                                                           {'shrinkage': None, 'solver': 'svd'}
+KNN                  0.803333  0.516432  0.540098     0.528  0.817502                              {'metric': 'manhattan', 'n_neighbors': 11, 'weights': 'distance'}
+SVM                      0.84  0.638478  0.494272  0.557196  0.815117                                                    {'C': 10, 'gamma': 'auto', 'kernel': 'rbf'}
+QDA                  0.818333  0.866667   0.12766  0.222539  0.747224                                                                             {'reg_param': 0.0}
+Naive Bayes             0.757  0.410876  0.445172  0.427337  0.719972                                                                       {'var_smoothing': 1e-05}
+
+BEST MODEL
+Model: Voting Ensemble
+Accuracy: 0.8593
+Precision: 0.7077
+Recall: 0.5270
+F1-Score: 0.6041
+ROC-AUC: 0.8734
+
+CLASSIFICATION REPORT
+              precision    recall  f1-score   support
+
+    Retained       0.89      0.94      0.91      2389
+     Churned       0.71      0.53      0.60       611
+
+    accuracy                           0.86      3000
+   macro avg       0.80      0.74      0.76      3000
+weighted avg       0.85      0.86      0.85      3000
+CONFUSION MATRIX
+[[2256  133]
+ [ 289  322]]
