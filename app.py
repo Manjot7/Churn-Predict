@@ -1566,7 +1566,7 @@ st.markdown("""
         Bank Customer Churn Prediction System &nbsp;·&nbsp;
         <a href="https://github.com/manjot7/churn-predict" target="_blank">GitHub Repository</a>
         &nbsp;·&nbsp;
-        <a href="https://linkedin.com/in/manjot7" target="_blank">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/manjot-singh-6b5110228/" target="_blank">LinkedIn</a>
         &nbsp;·&nbsp;
         Built with Python and Streamlit
     </p>
